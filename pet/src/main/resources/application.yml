@@ -26,10 +26,10 @@ spring:
       bindings:
         event-in:
           group: pet
-          destination: petstore
+          destination: petshop
           contentType: application/json
         event-out:
-          destination: petstore
+          destination: petshop
           contentType: application/json
 
 logging:
@@ -60,10 +60,10 @@ spring:
       bindings:
         event-in:
           group: pet
-          destination: petstore
+          destination: petshop
           contentType: application/json
         event-out:
-          destination: petstore
+          destination: petshop
           contentType: application/json
 
 
