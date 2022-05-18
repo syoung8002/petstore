@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 ---
 
@@ -14,7 +14,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: localhost:9092
+          brokers: localhost:29092
         streams:
           binder:
             configuration:
@@ -26,10 +26,10 @@ spring:
       bindings:
         event-in:
           group: pet
-          destination: petshop
+          destination: petstore
           contentType: application/json
         event-out:
-          destination: petshop
+          destination: petstore
           contentType: application/json
 
 logging:
@@ -37,10 +37,10 @@ logging:
     org.hibernate.type: trace
     org.springframework.cloud: debug
 
+---
 
 server:
-  port: 8081
----
+  port: 8080
 
 spring:
   profiles: docker
@@ -60,12 +60,8 @@ spring:
       bindings:
         event-in:
           group: pet
-          destination: petshop
+          destination: petstore
           contentType: application/json
         event-out:
-          destination: petshop
+          destination: petstore
           contentType: application/json
-
-
-
-<function>

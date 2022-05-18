@@ -1,20 +1,20 @@
 server:
-  port: 8080
+  port: 8083
 
 ---
 
 spring:
   profiles: default
   jpa:
-    properties:
-      hibernate:
-        show_sql: true
-        format_sql: true
+  properties:
+    hibernate:
+      show_sql: true
+      format_sql: true
   cloud:
     stream:
       kafka:
         binder:
-          brokers: localhost:9092
+          brokers: localhost:29092
         streams:
           binder:
             configuration:
@@ -26,10 +26,10 @@ spring:
       bindings:
         event-in:
           group: store
-          destination: petshop
+          destination: petstore
           contentType: application/json
         event-out:
-          destination: petshop
+          destination: petstore
           contentType: application/json
 
 logging:
@@ -37,11 +37,7 @@ logging:
     org.hibernate.type: trace
     org.springframework.cloud: debug
 
-
-server:
-  port: 8082
 ---
-
 spring:
   profiles: docker
   cloud:
@@ -60,12 +56,8 @@ spring:
       bindings:
         event-in:
           group: store
-          destination: petshop
+          destination: petstore
           contentType: application/json
         event-out:
-          destination: petshop
+          destination: petstore
           contentType: application/json
-
-
-
-<function>
