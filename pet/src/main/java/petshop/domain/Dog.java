@@ -1,4 +1,5 @@
-package petshop.domain;
+
+package petshop.domain;
 
 import javax.persistence.*;
 import org.springframework.beans.BeanUtils;
@@ -26,4 +27,3 @@ public class Dog extends Pet {
 
 }
 
-<function>

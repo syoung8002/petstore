@@ -1,4 +1,5 @@
-<template>
+
+<template>
 
 <v-card style="width:300px; margin-left:5%;" outlined>
     <template slot="progress">
@@ -183,4 +184,3 @@
 </script>
 
 
-<function>

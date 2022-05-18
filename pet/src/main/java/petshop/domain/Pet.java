@@ -1,4 +1,5 @@
-package petshop.domain;
+
+package petshop.domain;
 
 import petshop.domain.PetRegistered;
 import petshop.PetApplication;
@@ -57,4 +58,3 @@ public class Pet  {
 
 }
 
-<function>

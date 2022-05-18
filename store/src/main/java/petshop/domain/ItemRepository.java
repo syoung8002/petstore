@@ -1,4 +1,5 @@
-package petshop.domain;
+
+package petshop.domain;
 
 import petshop.domain.*;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -10,4 +11,3 @@ public interface ItemRepository extends PagingAndSortingRepository<Item, Long>{
 
 }
 
-<function>

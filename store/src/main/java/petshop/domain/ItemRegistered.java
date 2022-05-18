@@ -1,4 +1,5 @@
-package petshop.domain;
+
+package petshop.domain;
 
 import petshop.domain.*;
 import petshop.infra.AbstractEvent;
@@ -18,4 +19,3 @@ public class ItemRegistered extends AbstractEvent {
     }
 }
 
-<function>

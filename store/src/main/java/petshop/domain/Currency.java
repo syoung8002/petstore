@@ -1,4 +1,5 @@
-package petshop.domain;
+
+package petshop.domain;
 
 import javax.persistence.*;
 import org.springframework.beans.BeanUtils;
@@ -23,4 +24,3 @@ public enum Currency  {
 
 }
 
-<function>

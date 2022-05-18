@@ -1,4 +1,5 @@
-package petshop.domain;
+
+package petshop.domain;
 
 import petshop.domain.ItemRegistered;
 import petshop.StoreApplication;
@@ -63,4 +64,3 @@ public class Item  {
 
 }
 
-<function>
