@@ -1,26 +1,14 @@
-
 package petshop.domain;
 
-import javax.persistence.*;
-import org.springframework.beans.BeanUtils;
-import java.util.List;
-import lombok.Data;
 import java.util.Date;
+import java.util.List;
+import javax.persistence.*;
+import lombok.Data;
+import org.springframework.beans.BeanUtils;
 
-
-@Data
-
-public enum Currency  {
-
+public enum Currency {
     KR_WON,
     US_DOLLAR,
     ENG_POUND,
-    EURO;
-
-
-
-
-
-
+    EURO,
 }
-

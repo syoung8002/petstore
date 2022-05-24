@@ -1,9 +1,10 @@
-package petshop.domain;
+package petshop.domain;
 
+import java.util.Date;
+import lombok.Data;
 import petshop.domain.*;
 import petshop.infra.AbstractEvent;
-import lombok.Data;
-import java.util.Date;
+
 @Data
 public class PetRegistered extends AbstractEvent {
 
@@ -11,6 +12,4 @@ public class PetRegistered extends AbstractEvent {
     private String name;
     private int appearance;
     private int energy;
-
 }
-

@@ -39,12 +39,6 @@
           </div>
 
 
-          <div class="grey--text ml-4" v-if="editMode" style = "margin-top:-20px;">
-            <v-text-field type="number" label="PetId" v-model="value.petId"/>
-          </div>
-          <div class="grey--text ml-4" v-else>
-            PetId :  {{value.petId }}
-          </div>
 
 
     </v-card-text>
@@ -149,5 +143,4 @@
     },
   }
 </script>
-
 

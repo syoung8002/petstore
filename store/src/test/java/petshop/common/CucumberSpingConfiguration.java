@@ -1,12 +1,9 @@
-package petshop.common;
+package petshop.common;
 
-
-import petshop.StoreApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
+import petshop.StoreApplication;
 
 @CucumberContextConfiguration
 @SpringBootTest(classes = { StoreApplication.class })
-public class CucumberSpingConfiguration {
-    
-}
+public class CucumberSpingConfiguration {}

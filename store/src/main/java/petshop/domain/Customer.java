@@ -1,29 +1,19 @@
-
 package petshop.domain;
 
-import javax.persistence.*;
-import org.springframework.beans.BeanUtils;
-import java.util.List;
-import lombok.Data;
 import java.util.Date;
-
+import java.util.List;
+import javax.persistence.*;
+import lombok.Data;
+import org.springframework.beans.BeanUtils;
 
 @Entity
 @Data
-
-public class Customer  {
-
+public class Customer {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
+
     @Embedded
     private Address address;
-
-
-
-
-
 }
-

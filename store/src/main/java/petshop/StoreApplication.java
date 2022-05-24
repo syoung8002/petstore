@@ -1,18 +1,21 @@
-package petshop;
-import petshop.config.kafka.KafkaProcessor;
+package petshop;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.context.ApplicationContext;
+import petshop.config.kafka.KafkaProcessor;
 
 @SpringBootApplication
 @EnableBinding(KafkaProcessor.class)
 @EnableFeignClients
 public class StoreApplication {
+
     public static ApplicationContext applicationContext;
+
     public static void main(String[] args) {
-        applicationContext = SpringApplication.run(StoreApplication.class, args);
+        applicationContext =
+            SpringApplication.run(StoreApplication.class, args);
     }
 }

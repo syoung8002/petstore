@@ -7,8 +7,8 @@ Vue.use(Router);
 
 import PetManager from "./components/PetManager"
 
-import CartItemManager from "./components/CartItemManager"
 import ItemManager from "./components/ItemManager"
+import CartItemManager from "./components/CartItemManager"
 
 export default new Router({
     // mode: 'history',
@@ -21,14 +21,14 @@ export default new Router({
             },
 
             {
-                path: '/cartItems',
-                name: 'CartItemManager',
-                component: CartItemManager
-            },
-            {
                 path: '/items',
                 name: 'ItemManager',
                 component: ItemManager
+            },
+            {
+                path: '/cartItems',
+                name: 'CartItemManager',
+                component: CartItemManager
             },
 
 

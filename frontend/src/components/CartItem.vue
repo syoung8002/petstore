@@ -29,10 +29,10 @@
             :editMode="false" v-bind:key="index" :inCard="true"/>
           </div>
 
+
           <div>
             <Payment label:=Payment v-model="value.payment" :editMode="editMode"/>
           </div>
-
 
 
     </v-card-text>
@@ -93,8 +93,8 @@
   
   import Customer from './Customer.vue
   
-  import Payment from './vo/Payment.vue'
   
+  import Payment from './vo/Payment.vue'
   
   export default {
     name: 'CartItem',
@@ -182,5 +182,4 @@
       }
   }
 </script>
-
 

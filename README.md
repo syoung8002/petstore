@@ -1,2 +1,0 @@
-# petstore
-ddd-petstore example

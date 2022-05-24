@@ -25,13 +25,6 @@
     <v-card-text style = "margin-left:-15px; margin-top:10px;">
 
           <div class="grey--text ml-4" v-if="editMode" style = "margin-top:-20px;">
-            <v-text-field type="number" label="Appearance" v-model="value.appearance"/>
-          </div>
-          <div class="grey--text ml-4" v-else>
-            Appearance :  {{value.appearance }}
-          </div>
-
-          <div class="grey--text ml-4" v-if="editMode" style = "margin-top:-20px;">
             <v-text-field label="Name" v-model="value.name"/>
           </div>
           <div class="grey--text ml-4" v-else>
@@ -39,20 +32,7 @@
           </div>
 
 
-          <div class="grey--text ml-4" v-if="editMode" style = "margin-top:-20px;">
-            <v-text-field label="Type" v-model="value.type"/>
-          </div>
-          <div class="grey--text ml-4" v-else>
-            Type :  {{value.type }}
-          </div>
 
-
-          <div class="grey--text ml-4" v-if="editMode" style = "margin-top:-20px;">
-            <v-text-field type="number" label="Energy" v-model="value.energy"/>
-          </div>
-          <div class="grey--text ml-4" v-else>
-            Energy :  {{value.energy }}
-          </div>
 
 
     </v-card-text>
@@ -85,6 +65,14 @@
         Delete
       </v-btn>
       
+      <v-btn
+        color="deep-purple lighten-2"
+        text
+        @click="feed"
+        v-if="!editMode"
+      >
+        Feed
+      </v-btn>
     </v-card-actions>
   </v-card>
 
@@ -93,7 +81,6 @@
 
 <script>
   const axios = require('axios').default;
-  
   
   
   
@@ -154,8 +141,17 @@
           alert(e.message)
         }
       },
+      async feed(){
+        try{
+          var temp = await axios.put(axios.fixUrl(this.value._links.feed.href))
+          this.value = temp.data;
+          this.editMode = false;
+        }catch(e){
+          alert(e.message)
+        }
+      },
+      
     },
   }
 </script>
-
 
